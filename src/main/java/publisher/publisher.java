@@ -11,7 +11,7 @@ public class publisher {
         client.connect();
         MqttMessage message = new MqttMessage();
         message.setPayload("Hello world".getBytes());
-        client.publish("topic", message);
+        client.publish("TOPIC", message);
         client.disconnect();
 	}
 
