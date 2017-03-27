@@ -6,9 +6,8 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 public class SimpleMqttCallBack extends client implements MqttCallback {
 	
-
 	public void connectionLost(Throwable throwable) {
-	    System.out.println("Connection lost");
+		System.out.println("Connection lost");
 	}
 
 	public void messageArrived(String topic, MqttMessage mqttMessage) throws Exception {
@@ -17,8 +16,6 @@ public class SimpleMqttCallBack extends client implements MqttCallback {
 		if (message.equalsIgnoreCase("test")) {
 			System.out.println("match");
 		}
-
-		System.out.println(super.s);
 	}
 
 	public void deliveryComplete(IMqttDeliveryToken token) {
